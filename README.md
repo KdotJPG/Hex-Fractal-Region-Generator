@@ -1,4 +1,4 @@
-# Hex-Fractal-Region-Generator
+# Hex Fractal Region Generator
 The [Grown Biomes](http://mc-server.xoft.cz/docs/Generator.html#biome.grown) method, but implemented using a hex grid instead.
 
 # Images
@@ -11,12 +11,12 @@ The [Grown Biomes](http://mc-server.xoft.cz/docs/Generator.html#biome.grown) met
 
 1. Create a square array of side length (size * 2^steps)+1. This represents a diagonally-compressed square (rhombus) that maps to the hexagonal lattice.
 2. Populate the initial values, spaced out by stride=(2^steps).
- * Care could be taken in this step to ensure that certain region types don't border each other. But in this implementation, they are just assigned randomly.
+    * Care could be taken in this step to ensure that certain region types don't border each other. But in this implementation, they are just assigned randomly.
 3. Between each pair of defined values, set a new value that is randomly chosen between the two. These correspond to the midpoints of the triangular edges.
 4. Repeat #3 until every cell is assigned a value.
 5. Sample the grid using the skew transform from 2D simplex noise.
- * The first implemented sampler just finds the closest hexagon.
- * The second implemented sampler (shown in demo) considers identically-valued cells together, to straighten the edges.
+    * The first implemented sampler just finds the closest hexagon.
+    * The second implemented sampler (shown in demo) considers identically-valued cells together, to straighten the edges.
 
 ![Steps](images/hexsteps.png?raw=true)
 Step order is: Red, Orange, Yellow, Green. Rhombic section is highlighted, with the surrounding area grayed out.
@@ -37,3 +37,5 @@ This approach iteratively populates the midpoints of the edges of triangles. An 
 # Is it better?
 
 Is this better than the square grid approach? Hard to say. I do tend to notice hexagonal bias less readily than square bias. Hexagonal grids also have a number of nice properties, such as having more angles of symmetry, and being both the optimal packing and covering of 2D space. I like the result better than the square approach, but I think it could be improved further. Perhaps the "Midpoints" approach would provide even better results, or perhaps some bias control measures could be employed.
+
+###### Source for hex grid image used as a base for some illustrations: https://svgsilh.com/image/156568.html
