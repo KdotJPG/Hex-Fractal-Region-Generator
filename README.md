@@ -1,4 +1,4 @@
-# Hex-Fractal-Region-Generator
+# Hex Fractal Region Generator
 The [Grown Biomes](http://mc-server.xoft.cz/docs/Generator.html#biome.grown) method, but implemented using a hex grid instead.
 
 # Images
