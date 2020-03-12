@@ -36,7 +36,7 @@ public class HexFractalRegionGenerator {
 			for (int y = 0; y < arraySize; y += stride) {
 				for (int x = 0; x < arraySize; x += stride) {
 					// It has six hexagonal neighbors on the next layer down. It suffices and also avoids repetition,
-					// to consider only the "positive" three, (h, 0), (h, h), (h, 0), omitting those out of range.
+					// to consider only the "positive" three, (h, 0), (h, h), (0, h), omitting those out of range.
 					// h = halfStride, s = stride
 					
 					// (h, 0) picks between current and current+(s, 0)
