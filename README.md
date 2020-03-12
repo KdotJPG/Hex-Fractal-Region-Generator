@@ -29,13 +29,13 @@ It would be straightforward to extend this to an infinite grid. Divide the grid 
 ## Higher Dimensions
 It could be generalized to higher dimensions, using either the A or A* lattice as a generalization of the triangular lattice. See: Simplex or OpenSimplex noise.
 
-## Midpoints not edges
-This approach iteratively populates the midpoints of the edges of triangles. An alternative approach could populate the centers instead, chosen by the three corners. This is a more complex case, and would require more padding to make all necessary data available. It may also be more difficult to generalize to higher dimensions. But could be worth exploring the different properties it has, if any. The below image illustrates these steps with the same coloring as the image shown above.
+## Centers not edges
+This approach iteratively populates the midpoints of the edges of triangles. An alternative approach could populate the centers of the triangles instead, chosen by the three corners. This is a more complex case, and would require more padding to make all necessary data available. It may also be more difficult to generalize to higher dimensions. But could be worth exploring the different properties it has, if any. The below image illustrates these steps with the same coloring as the image shown above.
 
 ![Midpoint Steps](images/hexstepstri.png?raw=true)
 
 # Is it better?
 
-Is this better than the square grid approach? Hard to say. I do tend to notice hexagonal bias less readily than square bias. Hexagonal grids also have a number of nice properties, such as having more angles of symmetry, and being both the optimal packing and covering of 2D space. I like the result better than the square approach, but I think it could be improved further. Perhaps the "Midpoints" approach would provide even better results, or perhaps some bias control measures could be employed.
+Is this better than the square grid approach? Hard to say. I do tend to notice hexagonal bias less readily than square bias. Hexagonal grids also have a number of nice properties, such as having more angles of symmetry, and being both the optimal packing and covering of 2D space. I like the result better than the square approach, but I think it could be improved further. Perhaps the "Centers" approach would provide even better results, or perhaps some bias control measures could be employed.
 
 ###### Source for hex grid image used as a base for some illustrations: https://svgsilh.com/image/156568.html
