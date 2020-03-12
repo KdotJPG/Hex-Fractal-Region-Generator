@@ -24,7 +24,7 @@ Step order is: Red, Orange, Yellow, Green. Rhombic section is highlighted, with 
 # Extensions
 
 ## Infinite Grid
-It would be straightforward to extend this to an infinite grid. Divide the grid into compressed-square / rhombic patches, that overlap on just the padding (the +1 in step 1). Maintain a cache of patches. Have the sampler identify the current patch, then load or generate it. Discard old / infrequently used patches from the cache when appropriate, as part of this step. Replace Math.random with a hash function that always produces the same value for a given coordinate.
+It would be straightforward to extend this to an infinite grid. Divide the grid into compressed-square / rhombic patches, that overlap on just the padding (the +1 in step 1). Maintain a cache of patches. Have the sampler identify the current patch, then load or generate it. Discard old / infrequently used patches from the cache when appropriate, as part of this step. Replace java.util.random with a hash function that always produces the same value for a given coordinate.
 
 ## Higher Dimensions
 It could be generalized to higher dimensions, using either the A or A* lattice as a generalization of the triangular lattice. See: Simplex or OpenSimplex noise.
